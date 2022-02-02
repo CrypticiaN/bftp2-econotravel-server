@@ -20,14 +20,22 @@ public class ExperienceController {
 
     @GetMapping
     public List<Experience> allExperiences() {
-
         return experienceRepository.findAll();
-
     }
 
     @PostMapping
     public Experience createExperience(@RequestBody Experience experience) {
         return experienceRepository.save(experience);
+    }
+
+    @GetMapping("/edit/{id}")
+    public Experience updateExperience(@RequestBody Experience experience) {
+        return experienceRepository.save(experience);
+    }
+
+    @GetMapping("/delete/{id}")
+    public void deleteExperience(@PathVariable Long id) {
+        experienceRepository.deleteById(id);
     }
 
 }
