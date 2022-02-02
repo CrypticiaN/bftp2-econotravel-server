@@ -58,7 +58,7 @@ class Bftp2EconotravelServerApplicationTests {
     @Test
     void createsNewExperiences() throws Exception {
 
-        mockMvc.perform(post("/api/experiences/1")
+        mockMvc.perform(post("/api/experiences/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"name\": \"Experiencia 1: Paseo en bicicleta por el Montseny\"}")
         ).andExpect(status().is(200));
@@ -72,18 +72,6 @@ class Bftp2EconotravelServerApplicationTests {
 
     @Test
 
-    void returnsAFormToEditAnExperience() throws Exception {
-        Experience experience = experienceRepository.save(new Experience("Experiencia 2: Descubre la costa en barco de vela", "Disfruta de un hermoso paseo acuático en barco de vela por la increíble costa de Barcelona. Una escapada veraniega apta incluso para los días más calurosos del año. Descubre los encantadores alrededores de la ciudad de Barcelona y visita desde el mar sus más impresionantes playas y calas. Comenzaremos la excursión en el Puerto de Barcelona, desde donde partiremos hacia el norte para visitar playas como la Mar Bella, la Playa de la Mora y la Playa de los Pescadores. A bordo de la embarcación podremos disfrutar de una selección de quesos y embutidos catalanes acompañada de cava brut y zumos de frutas. Asimismo, pararemos cerca de la Playa de Montgat para realizar una actividad de buceo de superficie que nos permitirá apreciar la diversidad de la fauna marítima local y su ecosistema. Finalizaremos la excursión en el mismo puerto del que partimos.", 280, "4h", "Actividad disponible para todas las edades. Pasarela para silla de ruedas disponible bajo reserva.", "Playa, barco, excursión larga."));
-        mockMvc.perform(get("/juegos/edit/" + experience.getId()))
-                .andExpect(status().isOk())
-                .andExpect(view().name("api/experiences/edit"))
-                .andExpect(model().attribute("experience", experience))
-                .andExpect(model().attribute("title", "Editar Experiencia"));
-
-    }
-
-    @Test
-
     void allowsToDeleteAnExperience() throws Exception {
         Experience experience = experienceRepository.save(new Experience("Experiencia 2: Descubre la costa en barco de vela", "Disfruta de un hermoso paseo acuático en barco de vela por la increíble costa de Barcelona. Una escapada veraniega apta incluso para los días más calurosos del año. Descubre los encantadores alrededores de la ciudad de Barcelona y visita desde el mar sus más impresionantes playas y calas. Comenzaremos la excursión en el Puerto de Barcelona, desde donde partiremos hacia el norte para visitar playas como la Mar Bella, la Playa de la Mora y la Playa de los Pescadores. A bordo de la embarcación podremos disfrutar de una selección de quesos y embutidos catalanes acompañada de cava brut y zumos de frutas. Asimismo, pararemos cerca de la Playa de Montgat para realizar una actividad de buceo de superficie que nos permitirá apreciar la diversidad de la fauna marítima local y su ecosistema. Finalizaremos la excursión en el mismo puerto del que partimos.", 280, "4h", "Actividad disponible para todas las edades. Pasarela para silla de ruedas disponible bajo reserva.", "Playa, barco, excursión larga."));
         mockMvc.perform(get("/api/experiences/delete/" + experience.getId()))
@@ -93,26 +81,5 @@ class Bftp2EconotravelServerApplicationTests {
         assertThat(experienceRepository.findById(experience.getId()), equalTo(Optional.empty()));
 
     }
-
-
-    @Test
-
-    void returnsAFormToAddNewJuegos() throws Exception {
-        mockMvc.perform(get("/juegos/new"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("juegos/edit"))
-                .andExpect(model().attributeExists("juego"))
-                .andExpect(model().attribute("title", "Añadir Nuevo Juego"))
-                .andExpect(model().attribute("categories", hasItems(
-                        hasProperty("name", is("Simulation")),
-                        hasProperty("name", is("Role-Playing")),
-                        hasProperty("name", is("Sports")),
-                        hasProperty("name", is("Racing")),
-                        hasProperty("name", is("Misc")),
-                        hasProperty("name", is("Action")),
-                        hasProperty("name", is("Platform"))
-                )));
-    }
-
 
 }
