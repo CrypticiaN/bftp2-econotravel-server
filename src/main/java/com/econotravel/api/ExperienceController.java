@@ -35,7 +35,7 @@ public class ExperienceController {
         return experienceRepository.save(experience);
     }
 
-    @GetMapping("/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public Experience deleteExperienceById(@PathVariable Long id) {
         Experience experience = experienceRepository.findById(id).get();
         experienceRepository.deleteById(id);
