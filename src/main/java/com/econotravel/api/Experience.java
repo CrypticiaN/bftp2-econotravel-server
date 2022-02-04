@@ -11,6 +11,8 @@ public class Experience {
     private String name;
     @Lob
     private String description;
+
+
     private double price;
     private String duration;
     @Lob
