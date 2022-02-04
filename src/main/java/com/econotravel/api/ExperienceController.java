@@ -29,28 +29,16 @@ public class ExperienceController {
         return experienceRepository.save(experience);
     }
 
-//    @GetMapping("/edit/{id}")
-//    String editExperience(Model model, @PathVariable Long id){
-//        Experience experience = experienceRepository.findById(id).get();
-//        model.addAttribute("experience", experience);
-//        model.addAttribute("tittle", "Editar Experiencia");
-//        return "api/experiences/edit";
-//    }
-//    @GetMapping("/edit/{id}")
-//    public Experience updateExperienceById(@RequestBody Experience experience) {
-//        experienceRepository.findById(experience.getId());
-//        return experienceRepository.save(experience);
-//    }
-
-    @GetMapping("/delete/{id}")
-    public Experience deleteExperienceById(@PathVariable Long id) {
-        Experience experience = experienceRepository.findById(id).get();
-        experienceRepository.deleteById(id);
-        return experience;
-    }
-
     @GetMapping("/{id}")
     public Experience findExperience(@PathVariable Long id){
         return experienceRepository.findById(id).orElseThrow(null);
+    }
+
+
+    @DeleteMapping("/delete/{id}")
+    public Experience deleteExperienceById(@PathVariable Long id) {
+        Experience experience = experienceRepository.findById(id).orElseThrow(ExperienceNotFoundException::new);
+        experienceRepository.deleteById(id);
+        return experience;
     }
 }
