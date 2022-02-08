@@ -1,6 +1,7 @@
 package com.econotravel.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +30,8 @@ public class ExperienceController {
         return experienceRepository.save(experience);
     }
 
-    @PutMapping
+
+    @PutMapping()
     public Experience updateExperience(@RequestBody Experience experience) {
         experienceRepository.findById(experience.getId()).orElseThrow(ExperienceNotFoundException::new);
         return experienceRepository.save(experience);
@@ -47,4 +49,6 @@ public class ExperienceController {
         experienceRepository.deleteById(id);
         return experience;
     }
+
+
 }

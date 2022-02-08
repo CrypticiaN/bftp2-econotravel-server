@@ -9,10 +9,9 @@ public class Experience {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String image;
     @Lob
     private String description;
-
-
     private double price;
     private String duration;
     @Lob
@@ -21,8 +20,9 @@ public class Experience {
 
 
 
-    public Experience(String name, String description, double price, String duration, String accessibility, String tags) {
+    public Experience(String name, String image, String description, double price, String duration, String accessibility, String tags) {
         this.name = name;
+        this.image = image;
         this.description = description;
         this.price = price;
         this.duration = duration;
@@ -86,5 +86,13 @@ public class Experience {
 
     public void setTags(String tags) {
         this.tags = tags;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
