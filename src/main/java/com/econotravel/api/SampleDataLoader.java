@@ -51,7 +51,7 @@ public class SampleDataLoader {
                             "Actividad disponible para todas las edades. El acceso al huerto en silla de ruedas está garantizado.",
                             "Montaña, a pie, excursión corta."),
                     new Experience("Arte en la montaña sagrada ",
-                            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT65IXMhzuRWcmRpe6i2SvwJs8gEJsSI953xA&usqp=CAU",
+                            "https://3.bp.blogspot.com/_DCQhVsheLew/TJmZXcuyfvI/AAAAAAAABE8/4XnHpb12-rY/s1600/800px-MontserratMonastery01.jpg",
                             "Disfruta de la impresionante Montaña de Montserrat donde encontraréis el Museo con las salas modernistas de Puig i Cadafalch, lugar que acoge colecciones de gran valor en el corazón de la emblemática montaña. En el Museo encontraréis pinturas del Renacimiento y del Barroco que conviven con autores de los siglos XIX y XX, objetos del Próximo Oriente y orfebrería. Además de disfrutar de un paseo guiado por la montaña y el Museo, esta actividad incluye tentempié variado acompañado de vino espumoso, cava brut o refresco.",
                             125,
                             "2h",
