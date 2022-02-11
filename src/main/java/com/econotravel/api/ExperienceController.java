@@ -31,7 +31,7 @@ public class ExperienceController {
     }
 
 
-    @PutMapping()
+    @PutMapping("/{id}")
     public Experience updateExperience(@RequestBody Experience experience) {
         experienceRepository.findById(experience.getId()).orElseThrow(ExperienceNotFoundException::new);
         return experienceRepository.save(experience);
