@@ -31,12 +31,6 @@ public class ExperienceController {
     }
 
 
-    @PutMapping()
-    public Experience updateExperience(@RequestBody Experience experience) {
-        experienceRepository.findById(experience.getId()).orElseThrow(ExperienceNotFoundException::new);
-        return experienceRepository.save(experience);
-    }
-
     @GetMapping("/{id}")
     public Experience findExperience(@PathVariable Long id){
         return experienceRepository.findById(id).orElseThrow(null);
@@ -50,5 +44,10 @@ public class ExperienceController {
         return experience;
     }
 
+    @PutMapping
+    public Experience updateExperience(@RequestBody Experience experience) {
+        experienceRepository.findById(experience.getId()).orElseThrow(ExperienceNotFoundException::new);
+        return experienceRepository.save(experience);
+    }
 
 }
