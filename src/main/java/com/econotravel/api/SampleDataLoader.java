@@ -56,7 +56,14 @@ public class SampleDataLoader {
                             125,
                             "2h",
                             "Actividad disponible para todas las edades. El acceso al museo y al restaurante en silla de ruedas está garantizado.", "https://buy.stripe.com/5kAaGC3bKaFB80MaEH",
-                            "Montaña, a pie, excursión corta.")
+                            "Montaña, a pie, excursión corta."),
+                    new Experience("VALL DE NÚRIA: Un valle único",
+                            "https://www.lugaresdenieve.com/sites/default/files/vall-nuria_19.jpg",
+                            "Vall de Núria es un paraíso excepcional tanto para grandes como para pequeños. No hace falta subir a los picos más altos que rodean el valle para poder observar el paisaje idílico. La gran mayoría de caminos y miradores de Vall de Núria están al alcance de todo el mundo. Para disfrutar del invierno y que los pequeños y pequeñas puedan jugar con la nieve.",
+                            125,
+                            "5h",
+                            "Actividad disponible para todas las edades. El acceso a la montaña y al restaurante en silla de ruedas está garantizado.", "https://buy.stripe.com/5kAaGC3bKaFB80MaEH",
+                            "Montaña, a pie, excursión corta, nieve, esquí")
 
             );
 
