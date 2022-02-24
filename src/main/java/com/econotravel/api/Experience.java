@@ -16,17 +16,20 @@ public class Experience {
     private String duration;
     @Lob
     private String accessibility;
+    @Lob
+    private String payment;
     private String tags;
 
 
 
-    public Experience(String name, String image, String description, double price, String duration, String accessibility, String tags) {
+    public Experience(String name, String image, String description, double price, String duration, String accessibility, String payment, String tags) {
         this.name = name;
         this.image = image;
         this.description = description;
         this.price = price;
         this.duration = duration;
         this.accessibility = accessibility;
+        this.payment = payment;
         this.tags = tags;
     }
 
@@ -94,5 +97,12 @@ public class Experience {
 
     public void setImage(String image) {
         this.image = image;
+    }
+    public String getPayment() {
+        return payment;
+    }
+
+    public void setPayment(String payment) {
+        this.payment = payment;
     }
 }
