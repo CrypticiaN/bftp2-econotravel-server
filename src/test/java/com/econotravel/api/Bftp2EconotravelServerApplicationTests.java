@@ -60,7 +60,7 @@ class Bftp2EconotravelServerApplicationTests {
 
         mockMvc.perform(post("/api/experiences/")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{\"name\": \"Experiencia 1: Paseo en bicicleta por el Montseny\"}")
+                .content("{\"name\": \"Paseo en bicicleta por el Montseny\"}")
         ).andExpect(status().is(200));
 
         var experiences = experienceRepository.findAll();
@@ -87,7 +87,7 @@ class Bftp2EconotravelServerApplicationTests {
                 "https://buy.stripe.com/5kAaGC3bKaFB80MaEH",
                 "Playa, barco, excursión larga."));
 
-        mockMvc.perform(put("/api/experiences/")
+        mockMvc.perform(post("/api/experiences/")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"id\": \"" + experience.getId() + "\", \"name\": \"Descubre la costa de Barcelona\"," + " \"image\": \"../img/montseny.png\"," +
                         " \"description\": \"Disfruta de un hermoso paseo acuático en barco de vela por la increíble costa de Barcelona\"," +
