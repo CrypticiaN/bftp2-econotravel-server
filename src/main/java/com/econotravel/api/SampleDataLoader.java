@@ -43,7 +43,7 @@ public class SampleDataLoader {
                             "4h",
                             "Actividad disponible para todas las edades. Accesibilidad garantizada para sillas de ruedas.", "https://buy.stripe.com/fZe3ea13CdRN6WI005",
                             "Ciudad, a pie, excursión larga."),
-                    new Experience("Del huerto a la mesa",
+                    new Experience("Montbaig. Del huerto a la mesa",
                             "https://www.conmishijos.com/uploads/Familias/huerto-art.jpg",
                             "Comparte con los más pequeños las maravillas de la naturaleza. En esta excursión breve de tres horas, podréis plantar vuestras propias hortalizas y verduras en el huerto de Can Gilabert, ubicado en el corazón del Montbaig. Durante una hora y media, aprenderéis a cuidar de vuestro propio huerto, plantaréis y abonaréis vuestras propias plantas, y también recogeréis parte de los ingredientes que los expertos chefs de Can Gilabert utilizarán para preparar la posterior cena, donde disfrutaréis de la experiencia de consumir productos recién recogidos de la tierra con vuestras propias manos. Actividad ideal para familiarizar a los más pequeños de la familia con el estilo de vida rural y la agricultura sostenible. Asimismo, obtendréis como obsequio una botella de aceite virgen extra cultivado y preparado en Can Gilabert, obra de la familia Gilabert, que lleva más de 80 años cultivando olivos.",
                             145,
