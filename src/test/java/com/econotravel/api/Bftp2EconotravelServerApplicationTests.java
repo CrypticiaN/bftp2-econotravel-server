@@ -108,7 +108,6 @@ class Bftp2EconotravelServerApplicationTests {
         assertThat(experiences.get(0).getPrice(), equalTo(200.0));
         assertThat(experiences.get(0).getDuration(), equalTo("2h"));
         assertThat(experiences.get(0).getAccessibility(), equalTo("Pasarela para silla de ruedas disponible bajo reserva."));
-        assertThat(experiences.get(0).getPayment(), equalTo("https://buy.stripe.com/5kAaGC3bKaFB80MaEH"));
         assertThat(experiences.get(0).getTags(), equalTo("Excursión larga"));
 
     }
